@@ -1,10 +1,13 @@
 {
-  "name": "TimeOff.Management",
+  "name": "timeoff-mgmt-app",
   "version": "1.0.0",
   "private": false,
   "description": "Simple yet powerful absence management software for small and medium size business",
   "engines": {
     "node": ">=13.0.0"
+  },
+  "publishConfig": {
+    "registry": "http://34.122.90.105:30707/repository/npm-gorilla-int/"
   },
   "dependencies": {
     "bluebird": "^2.10.2",
