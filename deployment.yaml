@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: timeoff
-          image: fabianrp7/timeoff:1.0.0
+          image: fabianrp7/timeoff:tag
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
