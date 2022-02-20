@@ -16,18 +16,20 @@ spec:
         - name: timeoff
           image: fabianrp7/timeoff:1.0.0
           imagePullPolicy: Always
----
+          ports:
+            - containerPort: 3000
+--- 
 apiVersion: v1
 kind: Service
 metadata:
   name: timeoff
 spec:
-  ports:
-  - nodePort: 32330
-    port: 8080
-    protocol: TCP
-    targetPort: 8080
   selector:
     app: timeoff
-  sessionAffinity: None
   type: NodePort
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 30701
+
+ 
