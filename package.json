@@ -1,6 +1,6 @@
 {
   "name": "timeoff-mgmt-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "Simple yet powerful absence management software for small and medium size business",
   "engines": {
