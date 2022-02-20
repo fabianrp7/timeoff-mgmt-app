@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: timeoff
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+        app: timeoff
+  template:
+    metadata:
+      labels:
+        app: timeoff
+    spec:
+      containers:
+        - name: timeoff
+          image: fabianrp7/timeoff:1.0.0
+          command: ['docker', 'run', '-d -p ', '3000:3000', '--name alpine_timeoff']
+          imagePullPolicy: Always
+          # resources:
+          #   limits:
+          #     cpu: 500m
+          #     memory: 512Mi 
+          #   requests:
+          #     cpu: 500m
+          #     memory: 512Mi 
+          # ports:
+          #   - containerPort: 3000
+# --- 
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: timeoff
+# spec:
+#   selector:
+#     app: timeoff
+#   type: NodePort
+#   ports:
+#     - port: 3000
+#       targetPort: 3000
+#       nodePort: 30703
