@@ -15,7 +15,6 @@ spec:
       containers:
         - name: timeoff
           image: fabianrp7/timeoff:1.0.0
-          command: ['docker', 'run', '-d -p ', '3000:3000', '--name alpine_timeoff']
           imagePullPolicy: Always
           # resources:
           #   limits:
